@@ -1,0 +1,115 @@
+<!--
+ * @Author: 徐建辰
+ * @Date: 2021-08-17 16:53:34
+ * @LastEditTime: 2021-10-09 09:01:04
+ * @LastEditors: 徐建辰
+ * @Description: vue后台权限模板
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+
+  <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/vuex/3.6.2/vuex.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/vue-router/3.5.2/vue-router.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://gw.alipayobjects.com/os/lib/antv/g2/4.1.16/dist/g2.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
+  <script src="https://unpkg.com/element-ui@2.15.5/lib/index.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.5/lib/theme-chalk/index.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
+  <script src="https://webapi.amap.com/maps?v=1.4.7&key=c1f9b92cfc1b69e2a0b24128a23d40ca&plugin=AMap.CitySearch,AMap.Autocomplete,AMap.PlaceSearch,AMap.Geocoder"></script>
+
+  <!-- "@antv/g2": "^4.1.16",
+  "@antv/g2plot": "^2.3.19",
+  "axios": "^0.19.0",
+  "vue": "^2.6.11",
+  "vue-router": "^3.5.2",
+  "vuex": "^3.6.2"
+  "element-ui": "^2.15.5", -->
+
+  <title>
+    cli-admin
+  </title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    /* ie浏览器隐藏滚动条 */
+    -ms-overflow-style: none;
+  }
+
+  /* Chrome Safari */
+  ::-webkit-scrollbar {
+    display: none;
+    color: transparent;
+  }
+</style>
+
+<body>
+  <noscript>
+    <strong>We're sorry but cli-admin doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app">
+    <style>
+      @keyframes ldio {
+        0% {
+          transform: rotate(0deg)
+        }
+
+        50% {
+          transform: rotate(180deg)
+        }
+
+        100% {
+          transform: rotate(360deg)
+        }
+      }
+
+      .loadingio-eclipse {
+        width: 200px;
+        height: 200px;
+        margin: 150px auto 0;
+        overflow: hidden;
+      }
+
+      .ldio {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+      }
+
+      .ldio div {
+        box-sizing: content-box;
+        position: absolute;
+        animation: ldio 1s linear infinite;
+        width: 160px;
+        height: 160px;
+        top: 20px;
+        left: 20px;
+        border-radius: 50%;
+        box-shadow: 0 4px 0 0 #346fff;
+        transform-origin: 80px 82px;
+      }
+    </style>
+    <div class="loadingio-eclipse">
+      <div class="ldio">
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+<script type="text/javascript" src="js/chunk-vendors.js"></script><script type="text/javascript" src="js/app.js"></script></body>
+
+</html>
