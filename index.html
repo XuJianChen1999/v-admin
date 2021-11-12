@@ -1,7 +1,7 @@
 <!--
  * @Author: 徐建辰
  * @Date: 2021-08-17 16:53:34
- * @LastEditTime: 2021-11-11 10:34:37
+ * @LastEditTime: 2021-11-12 11:55:15
  * @LastEditors: Please set LastEditors
  * @Description: vue后台权限模板
 -->
@@ -16,18 +16,20 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.5/lib/theme-chalk/index.css">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
-
+  <link href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  
   <!-- "@antv/g2": "^4.1.16",
   "@antv/g2plot": "^2.3.19",
   "axios": "^0.19.0",
   "vue": "^2.6.11",
   "vue-router": "^3.5.2",
-  "vuex": "^3.6.2"
+  "vuex": "^3.6.2",
+  "countup": "^1.8.2",
+  "qrcodejs2": "^0.0.2",
+  "nprogress": "^0.2.0",
   "element-ui": "^2.15.5", -->
 
-  <title>
-    cli-admin
-  </title>
+  <title>cli-admin</title>
 </head>
 <style>
   body {
@@ -42,8 +44,45 @@
     display: none;
     color: transparent;
   }
-</style>
+  /**
+注意这里的css样式必须使用全局，不能加scoped标签！！！
+**/
+  :root[data-theme=dark]  {
+    /* 模式切换变量，默认light模式 */
+    --current-background-color: var(--dark-background-color);
+    --current-primary-color: var(--dark-primary-color);
 
+    /* 深色主题 */
+    --dark-primary-color: #fff;
+    --dark-background-color: #282c34;
+  }
+
+  :root[data-theme=light]  {
+    /* 模式切换变量，默认light模式 */
+    --current-background-color: var(--light-background-color);
+    --current-primary-color: var(--light-primary-color);
+
+    /* 浅色主题 */
+    --light-primary-color: #666;
+    --light-background-color: #fff;
+  }
+
+  .header-wrap {
+    height: 60px;
+    background-color: var(--current-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  }
+
+  .mode{
+    margin-right: 20px;
+    cursor: pointer;
+    color:var(--current-primary-color)!important;
+  }
+
+</style>
 <body>
   <noscript>
     <strong>We're sorry but cli-admin doesn't work properly without JavaScript enabled.
@@ -98,9 +137,12 @@
   <script type="text/javascript" src="https://cdn.bootcss.com/vue-router/3.5.2/vue-router.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://gw.alipayobjects.com/os/lib/antv/g2/4.1.16/dist/g2.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js'"></script> -->
   <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.5/index.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
   <script src="https://webapi.amap.com/maps?v=1.4.7&key=c1f9b92cfc1b69e2a0b24128a23d40ca&plugin=AMap.CitySearch,AMap.Autocomplete,AMap.PlaceSearch,AMap.Geocoder"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/screenfull.js/5.1.0/screenfull.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs2@0.0.2/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
 <script type="text/javascript" src="js/chunk-vendors.js"></script><script type="text/javascript" src="js/app.js"></script></body>
 </html>
