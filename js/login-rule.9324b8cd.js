@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkAdmin=self.webpackChunkAdmin||[]).push([[8085],{3153:function(n,e,r){r.r(e),r.d(e,{validatePassword:function(){return s}}),r(1703);const s=()=>(n,e,r)=>{e.length<6?r(new Error("密码不能少于6位")):r()}}}]);
